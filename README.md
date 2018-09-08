@@ -1,9 +1,19 @@
-# fizzbuzz_js_angelica
+FIZZBUZZ in JS 
 
+Fizzbuzz written in JS (unit + feature test done with acceptance test traning package)
 
-#Question 1. In your README to the best of your knowledge please explain what the following lines of code do:
+____________________________________
 
-let  fizzBuzz = fs.readFileSync('./src/js/fizz-buzz.js');
-eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`)
+Prerequisites
 
+- npm
+_____________________________________
+
+Built With
+
+- Javascript
+- Test ran with Chai and Mocha, CSS done with Tailwind package  
+
+_____________________________________
+Questions
 
