@@ -7,7 +7,7 @@ describe('User can input a value and get FizzBuzz results', () => {
         await browser.init()
         await browser.visitPage('http://localhost:8080/')
     })
-// got rid of ; on line 9
+
     beforeEach(async () => {
         await browser.page.reload();
     })
@@ -28,5 +28,12 @@ describe('User can input a value and get FizzBuzz results', () => {
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
         expect(content).to.eql('Buzz');
+    })
+
+    it('clicking on the "Check" button', async () => {
+        await browser.fillIn("input[id='value']", { with: "15" })
+        await browser.clickOnButton("input[value='Check']")
+        let content = await browser.getContent("[id='display_answer']")
+        expect(content).to.eql('FizzBuzz');
     })
 })
