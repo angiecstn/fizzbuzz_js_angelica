@@ -17,10 +17,16 @@ describe('User can input a value and get FizzBuzz results', () => {
     })
 
     it('clicking on the "Check" button', async () => {
+        await browser.fillIn("input[id='value']", { with: "3" })
+        await browser.clickOnButton("input[value='Check']")
+        let content = await browser.getContent("[id='display_answer']")
+        expect(content).to.eql('Fizz');
+    })
+
+    it('clicking on the "Check" button', async () => {
         await browser.fillIn("input[id='value']", { with: "5" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
         expect(content).to.eql('Buzz');
     })
-
 })
