@@ -11,14 +11,15 @@
 <body style="background-color:rgba(255,0,0,0.5);">
     <div class="wrapper container bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden align-content: center;">
     <h1 class= "text-center font-mono">Fizzbuzz </h1> </br></br>
-    <input class= "shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Insert number" type="text" id="value"> </br> </br> 
+    <input class= "shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline text-center font-mono" type="text" placeholder="Insert number" type="text" id="value"> </br> </br> 
     <input class= "form-control block bg-teal hover:bg-teal-dark text-white uppercase text-lg mx-auto p-4 rounded-full" type="submit" value="Check" id="button">   </br> </br> 
     <div class= "text-center font-mono" id="display_answer"></div>
-    <div> </br> </br> 
+    <div> </br> 
         <p class="text-center font-mono">The FizzBuzz test:</br></br>
                 Fizz buzz is a group word game for children to teach them about division. </br> This program will print every number between 1 and 100, However for numbers that are multiples of 3 print "Fizz" and for numbers that are multiples of five print "Buzz."   For numbers that are multiples of both 3 and 5 print "FizzBuzz". </p>
     </div> </br> </br> 
-    <p class="text-center text-grey text-xs">
+    <input class= "form-control block bg-teal hover:bg-teal-dark text-white uppercase text-lg mx-auto p-4 rounded-full" type="button" value="Refresh Page" onClick="window.location.reload()">
+    <p class="text-center text-grey text-xs"> </br> 
             ©2018 AC All rights reserved. </p> 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +27,7 @@
                     let displayDiv = document.getElementById('display_answer')
                     button.addEventListener('click', (btn) =>{
                         let value = document.getElementById('value').value
-                        if (!value) {
+                        if (!value || isNaN(value)) {
                             displayDiv.innerHTML = "You need to enter a number!";
                             return;
                         }
