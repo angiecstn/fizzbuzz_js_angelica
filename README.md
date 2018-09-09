@@ -18,10 +18,12 @@ _____________________________________
 Questions:
 
 Question 1. In your README to the best of your knowledge please explain what the following lines of code do?
-``` let  fizzBuzz = fs.readFileSync('./src/js/fizz-buzz.js'); eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`) ``` 
+``` let  fizzBuzz = fs.readFileSync('./src/js/fizz-buzz.js'); 
+    eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`) ``` 
+
 Answer:
-
-
+line 1: Chai must be able to read the fizz-buzz.js and it then stores the info received in a variable called fizzBuzz
+line 2: it evaluates the fizzBuzz variable defined before and adds the npm exported files (random guess)
 
 
 Question 2. In your README to the best of your knowledge please explain why we are placing the
